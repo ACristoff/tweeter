@@ -55,7 +55,15 @@ section.new-tweet {
 
 .error-out {
   padding-top: 1em;
+  width:90%;
   margin:auto;
+}
+
+.error-out-long {
+  display: none;
+}
+
+.error-out-empty { 
   display: none;
 }
 

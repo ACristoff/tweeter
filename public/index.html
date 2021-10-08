@@ -56,13 +56,14 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <!-- <label for="tweet-text">What are you humming about?</label><br> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="tweet-out">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div class="error-out-long error-out"><i class="fas fa-exclamation-triangle"></i> <p><b>UH OH! Your tweet is too long! Brevity is the soul of wit!</b></p></div>
+        <div class="error-out-empty error-out"><i class="fas fa-exclamation-triangle"></i> <p><b>UH OH! Your tweet is empty! Speak up!</b></p></div>
       </section>
 
       <section class="tweet-log" id="tweets-container">
