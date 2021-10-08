@@ -72,6 +72,14 @@ $(document).ready(function () {
     renderTweets(result);
   });
 
+  $("#dropdown").click(() => {
+    if ($("section.new-tweet").is(":hidden")) {
+      $("section.new-tweet").slideDown(300);
+    } else {
+      $("section.new-tweet").slideUp();
+    }
+  })
+
 
   // This function executes when someone attempts to submit a tweet
   $("form").on("submit", function (event) {
@@ -135,7 +143,7 @@ $(document).ready(function () {
   //checks how far we've scrolled and fades in a button to scroll up to top if we've scrolled down enough
   $(document).scroll(function() {
     var y = $(this).scrollTop();
-    if (y > 200) {
+    if (y > 400) {
       $('.bottomMenu').fadeIn();
     } else {
       $('.bottomMenu').fadeOut();

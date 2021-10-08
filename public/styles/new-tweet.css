@@ -1,14 +1,19 @@
+section.new-tweet {
+  display: none;
+}
+
 .new-tweet {
   display: flex;
   flex-direction: column;
   width:70%;
+  margin-top: 1em;
 }
 
 .new-tweet textarea {
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
-  border-bottom: 2px solid rgb(47, 49, 61, 80%) ;
+  border-bottom: 2px solid rgb(47, 49, 61, 80%);
   background-color: #f4f1ec;
   width: 100%;
   min-width: 20em;

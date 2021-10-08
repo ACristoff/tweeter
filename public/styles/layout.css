@@ -26,30 +26,6 @@ body {
   /* width:90%; */
 }
 
-/* .account {
-  display: flex;
-  flex-direction: column;
-}
-
-.account div p{
-  display: inline-block;
-  margin-left: 0.5em;
-}
-
-.account div {
-  display: inline;
-  width:auto;
-  white-space: nowrap;
-}
-
-.account div:hover {
-  color:darkblue;
-} */
-
-/* main {
-
-} */
-
 .container {
   display: flex;
   flex-direction: column;
@@ -133,8 +109,27 @@ hr {
   width:95%;
   text-align:center;
 }
+
+.bottomMenu a:visited {
+  color: #4056A1;
+}
+
+.bottomMenu a:hover {
+  color: rgb(101, 181, 255);
+}
 /* font-family: 'Bungee', cursive; font-family: 'Source Sans Pro', sans-serif; */
 
+.bottomMenu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  font-size: 52pt;
+  right:0;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  z-index: 1;
+  color: #4056A1;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -177,14 +172,5 @@ hr {
     margin-bottom: 0.5em;
     z-index: 1;
     color: #4056A1;
-  }
-
-
-  .bottomMenu a:visited {
-    color: #4056A1;
-  }
-
-  .bottomMenu a:hover {
-    color: rgb(101, 181, 255);
   }
  }
