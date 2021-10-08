@@ -72,31 +72,32 @@ $(document).ready(function () {
     renderTweets(result);
   });
 
+
+  //when the dropdown nav button gets clicked, it drops down the new tweet section based on whether or not it's already hidden
   $("#dropdown").click(() => {
     if ($("section.new-tweet").is(":hidden")) {
-      $("section.new-tweet").slideDown(300);
+      $("section.new-tweet").slideDown(300, () => {
+        // $('textarea').setAttribute("style", "height:", "2.5em")
+      });
     } else {
       $("section.new-tweet").slideUp();
     }
   })
+
+    //dynamically adds height to the textarea depending on how much it would need to scroll to show all the text
+    $("textarea").each(function () {
+      this.setAttribute("style", "height:" + (this.scrollHeight ) + "px;overflow-y:hidden;");
+    }).on("input", function () {
+      this.style.height = "auto";
+      this.style.height = (this.scrollHeight) + "px";
+    });
 
 
   // This function executes when someone attempts to submit a tweet
   $("form").on("submit", function (event) {
     //prevents the default form post request, replacing it with ajax requests
     event.preventDefault();
-
     //if there is an error previously existing, removes it with an animation.
-    if ($('#tweet-text').val().length > 140 || $('#tweet-text').val().length <= 0) {
-      if ($('error-out')) {
-        $('.error-out').slideUp(400, () => {
-          $(".error-out").remove()
-          // console.log($('#new-tweet').children().last());
-          // $('#new-tweet').children().last().remove();
-        });
-      }
-    }
-
     if ($('error-out')) {
       $('.error-out').slideUp(400, () => {
         $(".error-out").remove()
@@ -104,7 +105,6 @@ $(document).ready(function () {
         // $('#new-tweet').children().last().remove();
       });
     }
-
     //if a new error is detected, we use this conditional and a helper function to add a new element notifying the user of their error
     if ($('#tweet-text').val().length > 140) {
       errorOut('too long! Brevity is the soul of wit!')

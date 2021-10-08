@@ -55,9 +55,6 @@ section.new-tweet {
 
 .error-out {
   padding-top: 1em;
-  /* display:flex;
-  flex-direction: row;
-  justify-content:center; */
   margin:auto;
   display: none;
 }
@@ -74,5 +71,3 @@ section.new-tweet {
   margin-left:0.5em;
   justify-self:center;
 }
-
-/* font-family: 'Bungee', cursive; font-family: 'Source Sans Pro', sans-serif; */
