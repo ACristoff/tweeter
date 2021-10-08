@@ -5,7 +5,9 @@ Tweeter is a single page application, simulating the functionality of twitter fo
 You are able to post tweets, and tweets are dynamically posted and pulled from a database hosted in memory. There are all kinds of nifty features, such as responsive design, contextual buttons and such. Try it out and see for yourself!
 
 ## Final Product
+!["Screenshot of mobile view"](https://raw.githubusercontent.com/ACristoff/tweeter/master/docs/tweet1desktop.png)
 
+!["Screenshot of desktop view"](https://raw.githubusercontent.com/ACristoff/tweeter/master/docs/tweet2mobile.png)
 
 ## Getting Started
 
