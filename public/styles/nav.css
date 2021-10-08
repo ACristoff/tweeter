@@ -1,0 +1,70 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #006366;
+  background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+  color: #FFFFFF;
+  padding-right:1.5em;
+  padding-left: 1.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  position: fixed;
+}
+
+nav span {
+  font-family: 'bungee', cursive;
+}
+
+
+
+.CTA-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.CTA-tweet i {
+  align-self: center;
+  padding-bottom: 20px;
+}
+
+.CTA-tweet p {
+  margin-bottom: 5px;
+}
+
+nav button {
+  background-color: #006366;
+  background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+  width:1.5em;
+  margin: auto;
+  border:none;
+  cursor: pointer;
+}
+
+nav button i {
+  color: #FFFFFF;
+}
+
+nav i:hover {
+  color:rgb(101, 181, 255);
+}
+
+@media only screen and (min-width: 1024px) { 
+
+  nav{
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+  nav button {
+    background-color: #4056A1;
+    background-image: none;
+  }
+  
+  }
+/* font-family: 'Bungee', cursive; font-family: 'Source Sans Pro', sans-serif; */
+
+

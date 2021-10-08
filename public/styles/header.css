@@ -1,0 +1,17 @@
+.profile {
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #006366;
+  background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+  color: aliceblue;
+  padding-top: 6em;
+}
+
+@media only screen and (min-width: 1024px) { 
+  .profile {
+    padding-top: 0em;
+  }
+ }

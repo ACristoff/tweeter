@@ -1,0 +1,73 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width:70%;
+}
+
+.new-tweet textarea {
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 2px solid rgb(47, 49, 61, 80%) ;
+  background-color: #f4f1ec;
+  width: 100%;
+  min-width: 20em;
+  height: 2.5em;
+  font-family: 'Bungee', cursive;
+}
+
+.new-tweet button {
+  background-color: #3a459c;
+  border-style: none;
+  border-radius: 5%;
+  font-family: 'Bungee', cursive;
+  padding: 0.3em 1em 0.3em 1em;
+  color: #f4f1ec;
+  cursor: pointer;
+}
+
+.new-tweet button:hover {
+  background-color: rgb(95, 145, 238);
+}
+
+.new-tweet output {
+  font-family: 'Bungee', cursive;
+}
+
+.tweet-out {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.overlimit {
+  color:crimson
+}
+
+.counter {
+  padding-top:10px;
+}
+
+.error-out {
+  padding-top: 1em;
+  /* display:flex;
+  flex-direction: row;
+  justify-content:center; */
+  margin:auto;
+  display: none;
+}
+
+.error-out i {
+  display: inline-block;
+  color: crimson;
+  justify-self:center;
+}
+
+.error-out p {
+  display: inline-block;
+  margin-top: 0px;
+  margin-left:0.5em;
+  justify-self:center;
+}
+
+/* font-family: 'Bungee', cursive; font-family: 'Source Sans Pro', sans-serif; */
