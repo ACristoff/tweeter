@@ -166,4 +166,25 @@ hr {
     text-align: center;
   }
 
+
+  .bottomMenu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    font-size: 52pt;
+    right:0;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    z-index: 1;
+    color: #4056A1;
+  }
+
+
+  .bottomMenu a:visited {
+    color: #4056A1;
+  }
+
+  .bottomMenu a:hover {
+    color: rgb(101, 181, 255);
+  }
  }

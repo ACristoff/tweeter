@@ -127,6 +127,14 @@ $(document).ready(function () {
             renderTweets(result);
           });
       });
+  });
 
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 300) {
+      $('.bottomMenu').fadeIn();
+    } else {
+      $('.bottomMenu').fadeOut();
+    }
   });
 });
