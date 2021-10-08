@@ -9,6 +9,7 @@ $(document).ready(function() {
   const textBox = document.getElementById('tweet-text')
   // let textTotal = textBox.val();
 
+  //dynamically adds height to the textarea depending on how much it would need to scroll to show all the text
   $("textarea").each(function () {
     this.setAttribute("style", "height:" + (this.scrollHeight ) + "px;overflow-y:hidden;");
   }).on("input", function () {
@@ -16,11 +17,9 @@ $(document).ready(function() {
     this.style.height = (this.scrollHeight) + "px";
   });
   
-
+  //checks if the text area is over the limit or under the limit for limitations
   $("#tweet-text").on('input', function() {
-    // console.log(140 - $('#tweet-text').val().length)
     if ((140 - $('#tweet-text').val().length) < 0) {
-      // console.log('below zero!')
       $(this).next('div').children('output').addClass('overlimit')
     }
 

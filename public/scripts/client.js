@@ -8,6 +8,7 @@
 
 // //returns a tweet element as an <article>
 
+//escape function for use when rendering tweets, prevents cross-site scripting
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -18,6 +19,7 @@ const escape = function (str) {
 
 $(document).ready(function () {
   const createTweetElement = (data) => {
+    //a template variable that gets appended with the information that's passed through as the paramater data
     const $tweetformat = $(`
     <article class="tweet">
       <header> 
@@ -45,6 +47,7 @@ $(document).ready(function () {
   }
 
   const renderTweets = function (tweets) {
+    //empties the tweet container
     $("#tweets-container").empty();
     // loops through tweets
     for (const tweet of tweets) {
@@ -59,7 +62,7 @@ $(document).ready(function () {
     $(".new-tweet").append(errorFormat)
   };
 
-
+  //when the page initializes, does a get request and renders the tweets
   $.ajax({
     url: "/tweets",
     method: "GET"
@@ -129,9 +132,10 @@ $(document).ready(function () {
       });
   });
 
+  //checks how far we've scrolled and fades in a button to scroll up to top if we've scrolled down enough
   $(document).scroll(function() {
     var y = $(this).scrollTop();
-    if (y > 300) {
+    if (y > 200) {
       $('.bottomMenu').fadeIn();
     } else {
       $('.bottomMenu').fadeOut();
